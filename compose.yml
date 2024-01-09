@@ -1,0 +1,14 @@
+networks:
+  spinyoblock:
+
+services:
+  web:
+    build:
+      context: .
+    ports:
+      - 80:80
+      - 443:443
+    networks:
+      - spinyoblock
+    container_name: vite-react-ssl-container
+    
